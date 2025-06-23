@@ -21,7 +21,7 @@ module tb_AndGate;
         $display("input_1 = %b, input_2 = %b, output = %b", in1, in2, out);
         in1 = 1; in2 = 1; #10;
         $display("input_1 = %b, input_2 = %b, output = %b", in1, in2, out);
-        
+
         $finish;
     end
 endmodule

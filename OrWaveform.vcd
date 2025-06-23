@@ -1,5 +1,5 @@
 $date
-	Mon Jun 23 22:45:10 2025
+	Mon Jun 23 23:45:46 2025
 $end
 $version
 	Icarus Verilog
@@ -7,13 +7,13 @@ $end
 $timescale
 	1ps
 $end
-$scope module tb_AndGate $end
+$scope module tb_OrGate $end
 $var wire 1 ! out $end
-$var reg 1 " in1 $end
-$var reg 1 # in2 $end
+$var reg 1 " in0 $end
+$var reg 1 # in1 $end
 $scope module uut $end
-$var wire 1 " in1 $end
-$var wire 1 # in2 $end
+$var wire 1 " in0 $end
+$var wire 1 # in1 $end
 $var wire 1 ! out $end
 $upscope $end
 $upscope $end
@@ -28,11 +28,11 @@ $dumpvars
 0!
 $end
 #10000
+1!
 1#
 #20000
 0#
 1"
 #30000
-1!
 1#
 #40000
