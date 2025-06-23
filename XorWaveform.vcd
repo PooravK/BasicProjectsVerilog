@@ -1,0 +1,39 @@
+$date
+	Tue Jun 24 01:33:33 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_XorGate $end
+$var wire 1 ! out $end
+$var reg 1 " in0 $end
+$var reg 1 # in1 $end
+$scope module uut $end
+$var wire 1 " in0 $end
+$var wire 1 # in1 $end
+$var wire 1 ! out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0#
+0"
+0!
+$end
+#10000
+1!
+1#
+#20000
+0#
+1"
+#30000
+0!
+1#
+#40000
