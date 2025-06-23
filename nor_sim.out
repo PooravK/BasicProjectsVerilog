@@ -1,0 +1,62 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\Users\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\Users\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\Users\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\Users\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\Users\iverilog\lib\ivl\va_math.vpi";
+S_0000019fdb498760 .scope module, "tb_NorGate" "tb_NorGate" 2 3;
+ .timescale -9 -12;
+v0000019fdb49bcc0_0 .var "in0", 0 0;
+v0000019fdb522ce0_0 .var "in1", 0 0;
+v0000019fdb522d80_0 .net "out", 0 0, L_0000019fdb522e20;  1 drivers
+S_0000019fdb49b9f0 .scope module, "uut" "NorGate" 2 7, 3 1 0, S_0000019fdb498760;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "in0";
+    .port_info 1 /INPUT 1 "in1";
+    .port_info 2 /OUTPUT 1 "out";
+L_0000019fdb523e50 .functor OR 1, v0000019fdb49bcc0_0, v0000019fdb522ce0_0, C4<0>, C4<0>;
+v0000019fdb523780_0 .net *"_ivl_0", 0 0, L_0000019fdb523e50;  1 drivers
+v0000019fdb499f10_0 .net "in0", 0 0, v0000019fdb49bcc0_0;  1 drivers
+v0000019fdb49bb80_0 .net "in1", 0 0, v0000019fdb522ce0_0;  1 drivers
+v0000019fdb49bc20_0 .net "out", 0 0, L_0000019fdb522e20;  alias, 1 drivers
+L_0000019fdb522e20 .reduce/nor L_0000019fdb523e50;
+    .scope S_0000019fdb498760;
+T_0 ;
+    %vpi_call 2 15 "$dumpfile", "NorWaveform.vcd" {0 0 0};
+    %vpi_call 2 16 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000019fdb498760 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019fdb49bcc0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019fdb522ce0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 19 "$display", "input_1 = %d, input_2 = %d, output = %d", v0000019fdb49bcc0_0, v0000019fdb522ce0_0, v0000019fdb522d80_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019fdb49bcc0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019fdb522ce0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 21 "$display", "input_1 = %d, input_2 = %d, output = %d", v0000019fdb49bcc0_0, v0000019fdb522ce0_0, v0000019fdb522d80_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019fdb49bcc0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019fdb522ce0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 23 "$display", "input_1 = %d, input_2 = %d, output = %d", v0000019fdb49bcc0_0, v0000019fdb522ce0_0, v0000019fdb522d80_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019fdb49bcc0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019fdb522ce0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 25 "$display", "input_1 = %d, input_2 = %d, output = %d", v0000019fdb49bcc0_0, v0000019fdb522ce0_0, v0000019fdb522d80_0 {0 0 0};
+    %vpi_call 2 26 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "HDLBits/tb_NorGate.v";
+    "HDLBits/NorGate.v";
