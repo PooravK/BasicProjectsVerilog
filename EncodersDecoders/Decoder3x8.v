@@ -1,5 +1,6 @@
 module Decoder3x8(
     input [2:0]in,
+    input en,
     output reg [7:0]out
     );
     //My initial implementation
@@ -17,8 +18,10 @@ module Decoder3x8(
 
     //Implementation after learning about always blocks:
     always @(*) begin
-        out = 8'b00000000;
-        out[in] = 1'b1;
+        if (en)
+            out = 1 << in;
+        else
+            out = 8'b00000000;
     end
 
 endmodule
